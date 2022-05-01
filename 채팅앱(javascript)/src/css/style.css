@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.input-nickname-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #ffeb33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-nickname-wrapper.hide {
+    display: none;
+}
+.input-nickname-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-img {
+    width: 90px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.input-nickname-inner span {
+    margin-bottom: 0.5rem;
+}
+.input-nickname-inner input {
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+.input-nickname-inner button {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    outline: none;
+    padding: 0.3rem;
+}
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.display-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background: #a2b6c7;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.display-container {
+    flex: 12;
+    background: #b2c7d9;
+    overflow-y: scroll;
+}
+.input-container {
+    flex: 1;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+.input-container span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.3rem;
+    width: 100%;
+    height: 65px;
+}
+.chatting-input {
+    font-size: 12px;
+    height: 100%;
+    flex: 8;
+    border: none;
+}
+.send-button {
+    flex: 1;
+    background: #ffeb33;
+    border: none;
+    height: 100%;
+    border-radius: 3px;
+}
+.chatting-list li {
+    position: relative;
+    width: 90%;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    margin-top: 0.5rem;
+}
+.profile {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile .user {
+    position: absolute;
+    top: 0;
+    font-size: 10px;
+    margin-bottom: 0.3rem;
+}
+.sent .user {
+    right: 63px;
+}
+.received .user{
+    left: 63px;
+}
+.profile img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+.massage {
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 12px;
+    margin: 0 5px;
+    flex: 7;
+}
+.time {
+    font-size: 10px;
+    margin: 0 5px;
+}
+.sent {
+    flex-direction: row-reverse;
+    float: right;
+}
+.sent .massage {
+    background: #ffeb33;
+}
+.received .massage {
+    background: #fff;
+}

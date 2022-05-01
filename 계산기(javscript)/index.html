@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="history-wrap">
+            <a href="#" class="history-btn"><i class="fa fa-history" aria-hidden="true"></i></a>
+            <div class="history-body">
+                <div class="history-header">
+                    <h3><i class="fa fa-history" aria-hidden="true"></i></h3>
+                    <a href="#" class="history-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+                <ul class="history-cont">
+                    <span class="history-none" style='color: dodgerblue'>계산 기록 없음...</span>
+                </ul>             
+            </div>
+        </div>
+        <form name="forms">            
+            <input type="text" readonly name="output">
+            <input type="button" class="clear" value="C">
+            <input type="button" class="operator" value="/">
+            <input type="button" class="num" value="1">
+            <input type="button" class="num" value="2">
+            <input type="button" class="num" value="3">
+            <input type="button" class="operator" value="*">
+            <input type="button" class="num" value="4">
+            <input type="button" class="num" value="5">
+            <input type="button" class="num" value="6">
+            <input type="button" class="operator" value="+">
+            <input type="button" class="num" value="7">
+            <input type="button" class="num" value="8">
+            <input type="button" class="num" value="9">
+            <input type="button" class="operator" value="-">
+            <input type="button" class="dot" value=".">
+            <input type="button" class="num" value="0">
+            <input type="button" class="num" value="(">
+            <input type="button" class="num" value=")">
+            <input type="button" class="result" value="=">
+        </form>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

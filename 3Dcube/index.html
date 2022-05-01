@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contaier">
+        <div class="cube">
+            <img src="./images/facebook_empty.png" alt="face book icon img">
+            <img src="./images/twitter.png" alt="twitter icon img">
+            <img src="./images/youtube.png" alt="youtube icon img">
+            <img src="./images/instagram_empty.png" alt="instagram icon img">
+            <img src="./images/custom_img1.png" alt>
+            <img src="./images/custom_img2.png" alt>
+        </div>
+    </div>
+
+    <script>
+        // variable
+        const rotateSpeed = 2; //회전 속도
+        let rotateX = 0; //X축적값
+        let rotateY = 0; //Y축적값
+        let rotateZ = 0; //Z축적값
+        
+        let dirXinterval;
+        let dirYinterval;
+        let dirZinterval;
+
+        let xKeyDown = false;
+        let yKeyDown = false;
+        let zKeyDown = false;
+
+        //dom
+        const cubeElem = document.querySelector(".cube");
+        
+        //Event
+        window.addEventListener("keydown", e => {
+            const keyCode = e.keyCode;
+            console.log(keyCode)
+            if(!yKeyDown && (keyCode === 38 || keyCode === 40)) {
+                yKeyDown = true;
+                const status = keyCode === 38 ? true : false;
+                dirYinterval = setInterval(() => settingY(status), 100);                
+            }
+            else if(!xKeyDown && (keyCode === 39 || keyCode === 37)) {
+                xKeyDown = true;
+                const status = keyCode === 39 ? true : false;
+                dirXinterval = setInterval(() => settingX(status), 100);                
+            }
+            else if(!zKeyDown && (keyCode === 87 || keyCode === 81)) {
+                zKeyDown = true;
+                const status = keyCode === 87 ? true : false;
+                dirZinterval = setInterval(() => settingZ(status), 100);                
+            }
+        })
+
+        window.addEventListener("keyup", e => {
+            if(e.keyCode === 38 || e.keyCode === 40 ) {
+                clearInterval(dirYinterval);
+                yKeyDown = false;
+            }
+            else if(e.keyCode === 39 || e.keyCode === 37 ) {                
+                clearInterval(dirXinterval);
+                xKeyDown = false;
+            }
+            else if(e.keyCode === 81 || e.keyCode === 87 ) {                
+                clearInterval(dirZinterval);
+                zKeyDown = false;
+            }
+        })
+                
+
+        //function
+        
+        function settingY(direction) {            
+            direction ? rotateX += rotateSpeed : rotateX -= rotateSpeed;
+            rotateCube();
+        }
+        function settingX(direction) {                    
+            direction ? rotateY += rotateSpeed : rotateY -= rotateSpeed;
+            rotateCube();
+        }
+        function settingZ(direction) {                    
+            direction ? rotateZ += rotateSpeed : rotateZ -= rotateSpeed;
+            rotateCube();
+        }
+
+        function rotateCube() {
+            cubeElem.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+        }
+    </script>
+</body>
+</html>

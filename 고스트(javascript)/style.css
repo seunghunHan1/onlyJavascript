@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100vh;
+}
+body {
+    width: 100vw;
+    height: 500vh;
+    overflow-x: hidden;
+}
+
+/* svg이미지 */
+#ghost {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateZ(-50px) scale(1.3);
+    animation: moveUpDown infinite;
+    animation-duration: 2s;
+    width: 150px;
+}
+#pumpkin {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateZ(-6200px);
+    width: 20vw;
+}
+
+@keyframes moveUpDown {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 2vh;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.ghost .body {
+    width: 120px;
+    height: 160px;
+    background: #fff;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 45%;
+    position: relative;
+}
+.ghost .body .face {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.ghost .body .face .eye {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: #333;
+}
+.ghost .body .face .mouse {
+    width: 33px;
+    height: 15px;
+    background: #333;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 17px;
+    margin-top: 13px;
+}
+
+.ghost .bottom {
+    display: flex;
+
+}
+.ghost .bottom .leg {
+    background: #fff;
+    width: 24px;
+    height: 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.ghost .bottom .leg:nth-child(2n) {
+    position: relative;
+    top: -6px;
+    background: #999;
+    border-radius: 50%;
+}
+
+
+
+/* wall */
+.word {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    perspective: 500px;
+    background: url("./background.jpg") no-repeat;
+    background-size: cover;
+}
+.wall-wrap {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.wall {
+    position: absolute;
+    width: 100vw;
+    height: 7000px;
+    background: #999;
+}
+.wall.bottom-wall {
+    bottom: 0;
+    left: 50%;
+    background: #999;
+    transform: rotateX(90deg) translateX(-50%);
+    transform-origin: bottom;
+}
+.wall.right-wall {
+    bottom: 0;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    transform: rotateZ(90deg) rotateX(90deg) translateX(-50%);
+    transform-origin: bottom;
+}
+.wall.left-wall {
+    bottom: 0;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    transform: rotateZ(90deg) rotateX(90deg) translateX(-50%) translateZ(-100vw);
+    transform-origin: bottom;
+}

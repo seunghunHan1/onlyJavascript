@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --facebook: #3b5998;    
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+button {
+    cursor: pointer;
+}
+.wrap-all {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.start-screen.hide {
+    display: none;
+}
+.game-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.game-screen.active {
+    display: flex;
+}
+.play-time {
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: var(--facebook);
+}
+.image-container {
+    margin-top: 1rem;
+    list-style: none;
+    border: 2px solid var(--facebook);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.image-container li {
+    width: 100px;
+    height: 100px;    
+}
+.image-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+}
+.image-container.any li {
+    background-image: url("https://placeimg.com/400/400/any");
+}
+.image-container.animals li {
+    background-image: url("https://placeimg.com/400/400/animals");
+}
+.image-container.people li {
+    background-image: url("https://placeimg.com/400/400/people");
+}
+.start-button {
+    background: var(--facebook);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+.game-text {
+    position: absolute;
+    font-size: 45px;
+    color: #67c23a;
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
+    display: none;
+}
+.cheat {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: skyblue;
+}
+.list0 {
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.list1 {
+    background-position-x: -100px;
+    background-position-y: 0px;
+}
+.list2 {
+    background-position-x: -200px;
+    background-position-y: 0px;
+}
+.list3 {
+    background-position-x: -300px;
+    background-position-y: 0px;
+}
+.list4 {
+    background-position-x: 0px;
+    background-position-y: -100px;
+}
+.list5 {
+    background-position-x: -100px;
+    background-position-y: -100px;
+}
+.list6 {
+    background-position-x: -200px;
+    background-position-y: -100px;
+}
+.list7 {
+    background-position-x: -300px;
+    background-position-y: -100px;
+}
+.list8 {
+    background-position-x: 0px;
+    background-position-y: -200px;
+}
+.list9 {
+    background-position-x: -100px;
+    background-position-y: -200px;
+}
+.list10 {
+    background-position-x: -200px;
+    background-position-y: -200px;
+}
+.list11 {
+    background-position-x: -300px;
+    background-position-y: -200px;
+}
+.list12 {
+    background-position-x: 0px;
+    background-position-y: -300px;
+}
+.list13 {
+    background-position-x: -100px;
+    background-position-y: -300px;
+}
+.list14 {
+    background-position-x: -200px;
+    background-position-y: -300px;
+}
+.list15 {
+    background-position-x: -300px;
+    background-position-y: -300px;
+}
+
+.theme-menu {
+    opacity: 0;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    background: #fff;
+    padding: 40px;
+    z-index: -100;
+    transition: 0.5s;
+}
+.theme-menu.active {
+    opacity: 1;
+    z-index: 100;
+}
+.theme-menu h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.theme-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.theme-list li {
+    width: 20%;
+}
+.theme-list li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 20px;
+    background: #dbdbdb;
+    transition: 0.5s;
+}
+.theme-list li a:hover {
+    color: #fff;
+    background: dodgerblue;
+}
+.theme-close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.theme-close:hover {
+    transform: scale(1.2);
+}

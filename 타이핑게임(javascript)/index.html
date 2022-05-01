@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>타이핑마스터!</h1>        
+    </div>
+    <div class="word-display">
+        Hello
+    </div>
+    <div class="word-input-box">
+        <input type="text" class="word-input">
+    </div>
+    <div class="game-info">
+        <div>
+            남은시간: <span class="time">0</span>초
+        </div>
+        <div>
+            획득점수: <span class="score">0</span>점
+        </div>
+    </div>
+    <button class="button loading" onclick="run()">게임을 불러오는중...</button>
+    <button class="setting-toggle"><i class="fa fa-cog" aria-hidden="true"></i></button>
+
+    <form class="setting-wrap">
+        <h4 style="text-align: center; margin-bottom: 10px; font-size: 30px;">설정</h4>
+        <label for="time-setting" style="margin-right: 10px;">제한 시간</label>
+        <input name="time-setting" type="text" placeholder="제한 시간을 설정해주세요" style="padding: 5px; border: 1x solid #dbdbdb; outline: none;">
+        <button type="submit" style="display: block; margin: auto; background: none; border: 1px solid #dbdbdb; cursor: pointer; padding: 5px; margin-top: 10px; border-radius: 5px;">확인</button>
+    </form>
+
+
+    <!-- axios cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- custom js -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
