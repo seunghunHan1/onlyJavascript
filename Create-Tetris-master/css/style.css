@@ -1,0 +1,100 @@
+/* reset */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* style */
+.top-area {
+    display: flex;
+    width: 30vw;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0 20px;
+}
+.next-model > li > ul {
+    display: flex;
+}
+.next-model > li > ul > li {
+    border: 1px solid #dbdbdb;
+    width: 15px;
+    height: 15px;
+}
+.game-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-size: 50px;
+}
+.game-text button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: salmon;
+    border: none;
+    cursor: pointer;
+}
+.top-area > div {
+    display: flex;
+    align-items: center;
+}
+.score {
+    font-size: 36px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+.playground {
+    border: 1px solid #333;
+    width: 250px;
+    margin: 0 auto;
+}
+.playground > li {
+    height: 25px;
+}
+.playground > li > ul {
+    display: flex;
+}
+.playground > li > ul > li {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+}
+.tree {
+    background: #67c23a;
+}
+.square {
+    background: salmon;
+}
+.bar {
+    background: dodgerblue;
+}
+.zee {
+    background: red;
+}
+.elLeft {
+    background: yellow;
+}
+.elRight {
+    background: darkslategrey;
+}
+.next-block {
+    background: rgba(0, 0, 0, 0.7);
+}

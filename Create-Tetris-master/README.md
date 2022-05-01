@@ -1,0 +1,5 @@
+# 테트리스(javscript)
+![시작화면](https://user-images.githubusercontent.com/83062951/139191158-26dd2c79-45d0-4675-9169-0d3553b9c9dc.png)
+![게임진행](https://user-images.githubusercontent.com/83062951/139191156-dfa9133a-5207-4ef5-8166-0e037b7b966a.png)
+![점수증가](https://user-images.githubusercontent.com/83062951/139191154-0861da97-7d27-459c-9ae2-c25bed8c180c.png)
+![게임종료](https://user-images.githubusercontent.com/83062951/139191151-4bed1f61-befe-4b46-b470-f786bf371bc8.png)
